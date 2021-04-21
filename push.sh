@@ -1,1 +1,4 @@
-git add -A;git commit -m "code"; git push origin main;
+#bin/sh
+git add -A
+git commit -m "$1"
+git push origin main
