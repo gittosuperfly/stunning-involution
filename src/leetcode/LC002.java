@@ -34,7 +34,7 @@ public class LC002 {
             int y = q == null ? 0 : q.val;
             int add = nextAdd + x + y;
             nextAdd = add / 10;
-            temp = new ListNode(add % 10);
+            temp.next = new ListNode(add % 10);
             temp = temp.next;
 
             if (p != null) p = p.next;
