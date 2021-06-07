@@ -1,8 +1,8 @@
-package leetcode;
+package main.leetcode;
 
-import leetcode.help.Linked;
-import leetcode.help.ListNode;
-import leetcode.help.Printer;
+import main.leetcode.help.Linked;
+import main.leetcode.help.ListNode;
+import main.leetcode.help.Printer;
 
 public class LC002 {
 
