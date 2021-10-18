@@ -13,8 +13,8 @@ public class D1_Singleton {
         EnumSingleton.INSTANCE.show();
 
         //Kotlin实现
-        LazySingletonKt.INSTANCE.show();
-        HungrySingletonKt.get().show();
+        LazySingletonKt.get().show();
+        HungrySingletonKt.INSTANCE.show();
         DoubleCheckLockSingletonKt.get().show();
         ClassHolderSingletonKt.get().show();
         EnumSingletonKt.INSTANCE.show();
