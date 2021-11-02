@@ -1,4 +1,4 @@
-package main.design;
+package main.design.d1_singleton;
 
 /**
  * 单例模式
@@ -122,7 +122,7 @@ class ClassHolderSingleton {
  * 枚举在java中与普通类一样，都能拥有字段与方法，而且枚举实例创建是线程安全的，在任何情况下，它都是一个单例。
  * 直接以 EnumSingleton.INSTANCE 方式调用
  */
-enum EnumSingletonKt {
+enum EnumSingleton {
     INSTANCE;
 
     public void show(){

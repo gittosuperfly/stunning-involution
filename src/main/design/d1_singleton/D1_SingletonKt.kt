@@ -1,17 +1,13 @@
-package main.design
+package main.design.d1_singleton
 
-class D1_Singleton_Kotlin {
-    companion object{
-        @JvmStatic
-        fun main(args: Array<String>) {
-            LazySingletonKt.get().show()
-            HungrySingletonKt.show()
-            DoubleCheckLockSingletonKt.get().show()
-            ClassHolderSingletonKt.get().show()
-            EnumSingletonKt.INSTANCE.show()
-        }
-    }
+fun main() {
+    LazySingletonKt.get().show()
+    HungrySingletonKt.show()
+    DoubleCheckLockSingletonKt.get().show()
+    ClassHolderSingletonKt.get().show()
+    EnumSingletonKt.INSTANCE.show()
 }
+
 /**
  * 懒汉式
  * 为了使线程安全，需加 {@code @Synchronized}注解
@@ -27,7 +23,7 @@ class LazySingletonKt private constructor() {
             }
         @JvmStatic
         @Synchronized
-        fun get(): LazySingletonKt{
+        fun get(): LazySingletonKt {
             return INSTANCE!!
         }
     }
@@ -102,11 +98,11 @@ class ClassHolderSingletonKt private constructor() {
 /**
  * 枚举实现
  */
-enum class EnumSingleton {
+enum class EnumSingletonKt {
     INSTANCE;
 
     fun show() {
-        println("EnumSingleton")
+        println("EnumSingletonKt")
     }
 }
 
