@@ -14,4 +14,12 @@ public class Printer {
         }
         System.out.println();
     }
+
+    public static void print(int[] nums) {
+        System.out.print(nums[0]);
+        for (int i = 1; i < nums.length; i++) {
+            System.out.print(" -> " + nums[i]);
+        }
+    }
+
 }
