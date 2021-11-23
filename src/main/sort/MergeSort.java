@@ -1,6 +1,14 @@
 package main.sort;
 
+import main.leetcode.help.Printer;
+
 public class MergeSort  {
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{5, 2, 3, 6, 8, 4, 9, 0, 10, 1};
+        sort(nums);
+        Printer.print(nums);
+    }
 
     //这里统一创建了一个帮助数组help。优点是避免了频繁创建数组，缺点是占空间
 
