@@ -26,28 +26,19 @@ public class QuickSort {
     /**
      * 切分数组，将数组由基准点切分成两部分，左半边小于基准点，右半边大于基准点
      */
-    private static int cut(int[] nums, int l, int r) {
-        int i = l, j = r + 1, flag = nums[l];
-        while (true) {
-            //找到左边大于基准点的一个数
-            while (nums[++i] < flag) {
-                if (i == r) break;
+    public static int cut(int[] nums, int left, int right) {
+        int flag = nums[left];
+        int j = left;
+        for (int i = left + 1; i <= right; i++) {
+            if (nums[i] < flag) {
+                // j 的初值为 left，先右移，再交换，小于 flag 的元素都被交换到前面
+                j++;
+                swap(nums, j, i);
             }
-            //找到右边小于基准点的一个数
-            while (nums[--j] > flag) {
-                if (j == l) break;
-            }
-            //如果i.j值已经越界了，就说明已经没有需要交换的了
-            if (i >= j) {
-                break;
-            }
-            //交换两个点
-            swap(nums, i, j);
         }
-        //基准点其实一直都在第一位。前面是从++i开始找的，i的位置（l）保持不动。所以上面步骤结束以后和基准点交换一下位置
-        swap(nums, l, j);
-
-        //返回基准点在数组中的下标
+        // 在之前遍历的过程中，满足 nums[left + 1..j] < flag，并且 nums(j..i) >= flag
+        swap(nums, j, left);
+        // 交换以后 nums[left..j - 1] < flag, nums[j] = flag, nums[j + 1..right] >= flag
         return j;
     }
 

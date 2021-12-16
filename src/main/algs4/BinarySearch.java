@@ -1,6 +1,5 @@
 package main.algs4;
 
-import java.util.Arrays;
 
 public class BinarySearch {
 
@@ -8,7 +7,7 @@ public class BinarySearch {
         int[] nums1 = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
         System.out.println(search(nums1, 3));
 
-        int[] nums2 = new int[]{4,4,4,4,4,4,4};
+        int[] nums2 = new int[]{1, 2, 3, 4, 4, 4, 4};
         System.out.println(searchLeft(nums2, 4));
         System.out.println(searchRight(nums2, 4));
 
